@@ -13,6 +13,13 @@
     margin: 3rem 5rem 0;
 }
 
+/* FIRST SECTION OF THE NAV BAR */
+
+.SectionLogo{
+    display: flex;
+    align-items: center;
+}
+
 
 /* SECOND SECTION OF THE NAV BAR */
 
@@ -24,9 +31,12 @@
 .contentSearch{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     border: .5px groove #F2F2F2;
     border-radius: 12px; 
     box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.10);
+    height: 45px;
 }
 
 .city{
@@ -34,15 +44,30 @@
     border-radius: 12px 0 0 12px;
     text-align: center;
     width: 140px;
+    height: 100%;
 }
 
 .guest{
     border: .5px groove #F2F2F2;
     text-align: center;
     width: 90px;
+    height: 100%;
+}
+
+.SearchImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    width: 35px;
 }
 
 .LogoSearch{
-    width: 17px;
+    width: 18px;
     height: 18px;
 }
+
+
+
+/* RENDERIZADO CONDICIONAL, PARA EL NAV BAR */
+
