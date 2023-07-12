@@ -2,9 +2,21 @@
 import logo from "../../img/logo.svg";
 import searchIcon from "../../img/search1.svg";
 import "./NavBar.css";
+import NavBarSecond from "./NavBarSecond";
+import { useState } from "react";
+
 
 function NavBar() {
+  const [change, setChange] = useState(true);
+
+  function ChangeStatus(){
+    setChange(!change)
+  }
+
+
   return (
+    <>
+    {change === true ? (<>
     <div className="ContenedorNav">
       <div className="ContenedorUno">
         <section className="SectionLogo">
@@ -18,16 +30,16 @@ function NavBar() {
             <input className="city" placeholder="Helsinki, Finland"/>
             <input className="guest" placeholder="Add guest"/>
             <div className="SearchImage">
-              <img className="LogoSearch" src={searchIcon} alt="SearchLogo" />
+              <img className="LogoSearch" src={searchIcon} alt="SearchLogo" onClick={ChangeStatus}/>
             </div>
           </div>
-        </section>
-
-      </div>
-      <div className="Contenedor2">
-
+        </section>   
       </div>
     </div>
+
+    </>): <NavBarSecond/> }
+
+    </>
   );
 }
 

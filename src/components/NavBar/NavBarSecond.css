@@ -1,0 +1,95 @@
+/* START STYLES FOR THE COMPONENT NAV BAR */
+
+.MainCont{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 0 0 0;
+}
+
+/* CONTENEDOR ONE ALL THE NAV BAR INFORMATION */
+
+.ContOne{
+    height: 35vh;
+}
+
+.SectionSearch{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* SECOND SECTION OF THE NAV BAR */
+
+
+.SearchCont{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+/*     border: .5px groove #F2F2F2; */
+    border-radius: 12px; 
+    height: 60px;
+    width: 90%;
+}
+
+.ciudad{
+    border: .5px groove #F2F2F2;
+    border-radius: 16px 0 0 16px;
+    text-align: center;
+    width: 33%;
+    height: 100%;
+}
+
+.ciudad > input{
+    border: .5px groove #F2F2F2;
+    border-radius: 12px 0 0 12px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.invitados{
+    border: .5px groove #F2F2F2;
+    text-align: center;
+    width: 33%;
+    height: 100%;
+}
+
+.invitados > input{
+    border: .5px groove #F2F2F2;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ImagenBusqueda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: .5px groove #F2F2F2; 
+    border-radius: 0 16px 16px 0;
+    text-align: center;
+    width: 33%;
+    height: 100%;
+}
+ 
+
+.contImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #F2F2F2;
+    width: 33%;
+    height: 70%;
+    border-radius: 16px;
+    background: #EB5757;
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 0.10);
+}
+
+
+.Contenedor2{
+    background: rgba(79, 79, 79, 0.40); 
+    /* background-color:#4F4F4F66; */
+    height: 55vh;
+}
