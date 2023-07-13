@@ -1,0 +1,52 @@
+
+
+.ContPrin{
+    display: flex;
+    flex-direction: column;
+    margin: 4.5rem 5rem 0;
+}
+
+.SectionTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 2.5rem;
+}
+
+.ContCard{
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    height: 35vh;
+    border: 1px solid black;
+    
+}
+
+.ContImg{
+    border: 1px solid gray;
+    height: 75%;
+    border-radius: 24px;
+}
+
+/* Information of the hotel */
+
+.ContInf{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.2rem;
+}
+
+.Information{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.super{
+    border: 1px groove #4F4F4F;
+    border-radius: 12px;
+    padding: .35rem;
+    font-size: 12px;
+}
+
