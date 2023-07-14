@@ -24,6 +24,7 @@ function Card() {
     getData();
   }, []);
 
+
   return (
     <div className="ContPrin">
       <section className="SectionTitle">
@@ -40,17 +41,22 @@ function Card() {
                 </div>
                 <div className="ContInf">
                   <div className="Information">
-                    <span className="super">{inf.superHost}</span>
-                    <span className="apartment">{inf.type}</span>
-                    <span className="apartment">{inf.beds} beds</span>
+                    { inf.superHost ? (<><span className="super">SUPER HOST</span>
+                      <div>
+                          <span className="apartment">{inf.type}</span> 
+                          { inf.beds ? (<span className="apartment"> . {inf.beds} beds</span> ): ""}
+                      </div>
+                    </> ) : (<>                      
+                        <span className="apartment">{inf.type}</span> 
+                        { inf.beds ? (<span className="apartment"> {inf.beds} beds</span> ): ""}
+                    
+                    </>)}
                     <div className="recomendacion">
                       <img src={Star} alt="Rate" />
                       <span className="rate">{inf.rating}</span>
                     </div>
                   </div>
-                  <p className="parrafo">
-                   {inf.title}
-                  </p>
+                    <p className="parrafo"> {inf.title}</p>
                 </div>
               </div>
             </>
