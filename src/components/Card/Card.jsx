@@ -1,5 +1,6 @@
 import "./Card.css";
 import Star from "../../img/star-fill.svg";
+import NavBar from "../NavBar/NavBar"
 
 import { useState, useEffect } from "react";
 
@@ -24,15 +25,55 @@ function Card() {
     getData();
   }, []);
 
+  /* FUNCTION TO FILTERED THE JSON */
+
+  const [cities,setCities] = useState(data)
+
+  const handleChange = (e)=>{
+      let keyWord = e.target.value.toLowerCase();
+      let newArray = data.filter( city =>{
+        let detail = city.city.toLowerCase();
+        return detail.includes(keyWord)
+      }
+      )
+
+      setCities(newArray)
+    }
+    // obtiene los datos para que toda la info se renderize en la primera vez
+    useEffect(() => {
+      setCities(data);
+    }, [data]);
+
+  /*   // SECOND FILTER FOR THE ADD PERSON 
+    const [ guest, setGuest ] = useState(cities)
+    
+    const handleChange2 = (e)=>{
+      let keyWord = e.target.value;
+      let newArray = cities.filter( city =>{
+        let detail = city.maxGuests;
+        return detail.includes(keyWord)
+      }
+      )
+
+      setGuest(newArray)
+    }
+    // obtiene los datos para que toda la info se renderize en la primera vez
+    useEffect(() => {
+      setCities(cities);
+    }, [cities]); */
+
+
 
   return (
+    <>
+    <NavBar handleChange={handleChange} />
     <div className="ContPrin">
       <section className="SectionTitle">
         <h2>Stays in Finland</h2>
         <p>12+ stays</p>
       </section>
       <section className="card">
-        {data.map((inf, i) => {
+        {cities.map((inf, i) => {
           return (
             <>
               <div key={i} className="ContCard">
@@ -63,7 +104,10 @@ function Card() {
           );
         })}
       </section>
+    
     </div>
+
+    </>
   );
 }
 

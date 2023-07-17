@@ -6,7 +6,7 @@ import NavBarSecond from "./NavBarSecond";
 import { useState } from "react";
 
 
-function NavBar() {
+function NavBar({handleChange}) {
   const [change, setChange] = useState(true);
 
   function ChangeStatus(){
@@ -27,8 +27,8 @@ function NavBar() {
 
         <section className="SectionSearch">
           <div className="contentSearch">
-            <input className="city" placeholder="Helsinki, Finland"/>
-            <input className="guest" placeholder="Add guest"/>
+            <input className="city" placeholder="City" onChange={handleChange} />
+            <input className="guest" placeholder="Add guest" />
             <div className="SearchImage">
               <img className="LogoSearch" src={searchIcon} alt="SearchLogo" onClick={ChangeStatus}/>
             </div>
